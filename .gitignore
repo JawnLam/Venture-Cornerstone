@@ -1,0 +1,28 @@
+# Venture Cornerstone — Operator-Private Zone patterns (see CONTRIBUTING.md § Content zones)
+
+# Operator profile — never tracked, never auto-inferred (P7)
+_USER.md
+
+# Per-cartridge working state and private logs (operator's active work)
+*/Sessions/
+*/_design-state.md
+*/_source-log.md
+
+# Shipped Examples carve-out: Example-Business-* cartridges are release-owned
+# reference implementations and ship IN FULL — re-include the working files the
+# operator-private patterns above would otherwise ignore.
+!Example-Business-*/Sessions/
+!Example-Business-*/_design-state.md
+!Example-Business-*/_source-log.md
+
+# Packaged-cartridge note: a cartridge closed out per _venture-cornerstone-engine/06-CLOSE-OUT.md
+# nests its history under <Business>/Records/, which the single-level patterns above do not
+# match — a packaged cartridge (e.g. Example-Business-Tendly) ships fully tracked by design.
+
+# Filesystem / workspace noise
+.DS_Store
+.obsidian/
+
+# NOTE: the Grows-Through-Use Zone (_portfolio/failure-catalog.md and
+# _portfolio/benchmark-library.md) is intentionally NOT ignored — it ships seeded
+# and is merge-updated, not clobbered, on git pull.

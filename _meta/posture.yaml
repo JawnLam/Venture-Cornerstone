@@ -1,0 +1,127 @@
+# Standalone Sufficiency Posture — source of truth (Convention 10)
+#
+# Per-OV registry of dispositions against the 47-requirement substrate at
+# _design-engine/_meta/standalone-sufficiency/requirements.yaml.
+# SEEDED at POSTURE-DECLARATION (Venture Cornerstone, 2026-07-26); ported into
+# Artifacts/_meta/ at ARTIFACT-DRAFT (2026-07-27) as the shipped source of truth.
+# Per-requirement dispositions are filled during ARTIFACT-DRAFT and finalized at
+# SHIP-PREP Phase 3.10. The load-bearing frame — domain_stakes + moat_commitments +
+# the applicable TG gates (I/K) — is committed. The human-readable render of this
+# file is ../standalone-sufficiency-posture.md.
+
+type: Fleeting
+Item_ID: venture-cornerstone-posture
+Title: "Venture Cornerstone — Standalone Sufficiency Posture (source)"
+Date_Added: 2026-07-26
+Date_Modified: 2026-07-27
+Needs_Processing: false
+
+# --- OV identification ---
+ov_name: "Venture Cornerstone"
+ov_slug: "venture-cornerstone"
+
+# --- Domain stakes ---
+# HIGH: the OV's documents drive irreversible, regulated-adjacent decisions —
+# securities (investor financials, cap table, equity splits), debt (SBA/bank loan
+# plans), and tax/entity choice. The OV drafts but never issues authoritative
+# financial/legal/securities advice; it hard-stops and routes to a licensed
+# professional where sign-off is required (requires-signoff-by). The 8 TG
+# conditional gates apply.
+domain_stakes: high   # low | high
+
+# --- Convention 10 substrate revision this posture targets ---
+convention_10_revision: "1.2"
+
+# --- Moat commitments (>=1 required) ---
+moat_commitments:
+  - req_id: REQ-M1
+    schema_feature: "Cross-cartridge failure catalog in a grows-through-use _portfolio/ zone; appended at every cartridge close-out (business #4 benefits from shipping #1-3). Baseplate's proven flywheel, ported. Seeded PF-1..PF-9 at Artifacts/_portfolio/failure-catalog.md."
+  - req_id: REQ-M2
+    schema_feature: "Source-tagged benchmark/comparables library at Artifacts/_portfolio/benchmark-library.md (Decision 10, issue 4): a real mechanism, not just intent — a CONSULT step in generation (standard 14) reads the library when judging an assumption's plausibility, a CONTRIBUTE step at close-out (06-CLOSE-OUT step 6) appends verified figures, and a k-anonymity (N>=3) aggregation rule resolves the M4/confidentiality contradiction. The founder's accumulated, vetted numbers are the system of record."
+
+# --- TG gate posture note (domain_stakes: high) ---
+# Because stakes are high, REQ-I1..I5 (calibration/escalation/auditability) and
+# REQ-K1..K3 (data governance/privacy/ownership) are APPLICABLE, not n-a. They
+# are seeded 'deferred' below with a waiver pointing at the design phase; each
+# must be dispositioned to 'met' (or an explicit waiver) before SHIP-PREP 3.10.
+
+# --- Per-requirement dispositions (REVIEW fill, 2026-07-27, Decision 11) ---
+# Vocabulary: met | partial | n-a | deferred. T0/applicable-TG partial|deferred
+# require waiver_reason. Dispositions whose requirement text is documented in this
+# volume are filled with evidence; rows whose substrate definition lives only in
+# OVE's requirements.yaml (I2, I5, K2, B2/B3, C2..C4, D2/D3, E1..E3, F2/F3, G*,
+# H1..H3, J1..J3, L1/L3, M3) stay 'deferred' — guessing a requirement's meaning to
+# mark it met would be the OV's own fabrication failure. Final pass: SHIP-PREP 3.10.
+requirements:
+  # Category A — Foundational Parity & Scope Integrity (T0)
+  REQ-A1: { disposition: met, evidence: "engine is plain markdown + manual gates (BNF-1); canon baked into 01; golden session executed 2026-07-27 with a fresh instance of a different family than the drafter (see _meta/golden-session-script.md)", notes: "runs on any capable model; leans on general business knowledge + baked-in canon" }
+  REQ-A2: { disposition: met, evidence: "05-GATES.md § AUDIT-STACK degraded mode + executed foreign-stack dry run 2026-07-27 (_meta/audit-stack-dry-run.md): portable checks caught seeded defects; BB-native checks reported as instrumentation gaps, not failures", notes: "AUDIT-STACK earns the graceful-scope claim — useful on a stranger's materials, not a checklist reporting its own absence" }
+  REQ-A3: { disposition: met, evidence: "authority boundary refuses only authoritative sign-off (00-START-HERE § authority boundary); golden-session Turn-3 probe verifies active refusal without benign-question refusal", notes: "answers benign adjacent questions; discipline lives at the ship gate + authority boundary" }
+
+  # Category B — Memory & Statefulness (B1 T0)
+  REQ-B1: { disposition: met, evidence: "per-cartridge backbone state files (Decision 9) + cross-cartridge _portfolio/ (failure catalog loaded at every session start; benchmark library consulted at generation)", notes: "per-cartridge state + cross-cartridge portfolio/benchmark library" }
+  REQ-B2: { disposition: deferred, evidence: "", notes: "" }
+  REQ-B3: { disposition: deferred, evidence: "", notes: "" }
+
+  # Category C — Workflow Orchestration (T1)
+  REQ-C1: { disposition: met, evidence: "NEW-STACK route (BOOTSTRAP-NEW-BUSINESS.md): INTERVIEW → SELECT (locked) → GENERATE (band order) → GATE (freeze + two gates) → PACKAGE (06-CLOSE-OUT)", notes: "interview -> select -> generate -> gate -> package" }
+  REQ-C2: { disposition: deferred, evidence: "", notes: "" }
+  REQ-C3: { disposition: deferred, evidence: "", notes: "" }
+  REQ-C4: { disposition: deferred, evidence: "", notes: "" }
+
+  # Category D — Proprietary Knowledge & Grounding (T1)
+  REQ-D1: { disposition: met, evidence: "canon grounded in six verified public frameworks (S-1..S-6, _source-inventory.md; F13 discharged 2026-07-27 with corrections encoded)", notes: "canon grounded in public named frameworks; source-verified before draft (F13)" }
+  REQ-D2: { disposition: deferred, evidence: "", notes: "" }
+  REQ-D3: { disposition: deferred, evidence: "", notes: "" }
+  REQ-D4: { disposition: met, evidence: "requires-signoff-by hard stops on every L6 doc + cap table + investor financials (std 8; Gate 1 check); golden-session Turn-3 verifies refusal is active, not a disclaimer", notes: "no authoritative sign-off outside competence — authority boundary" }
+
+  # Category E — Integration, Action & Simulation (T1; E4 moat-eligible)
+  REQ-E1: { disposition: deferred, evidence: "", notes: "" }
+  REQ-E2: { disposition: deferred, evidence: "", notes: "" }
+  REQ-E3: { disposition: deferred, evidence: "", notes: "" }
+  REQ-E4: { disposition: partial, evidence: "one-variable sensitivity table now MANDATORY on every financial document (std 13; Gate 1 check)", notes: "correlated/scenario simulation remains the REVISE-STACK full-model job — candidate future moat" }
+
+  # Category F — Structured Deliverables (T1)
+  REQ-F1: { disposition: met, evidence: "the packaged dossier (AI-BOOTSTRAP + Stack/ + Records/ + Workspace/ with SHA-256 MANIFEST) is the route's deliverable; reference package: Example-Business-Tendly", notes: "the packaged founding-document stack is the deliverable" }
+  REQ-F2: { disposition: deferred, evidence: "", notes: "" }
+  REQ-F3: { disposition: deferred, evidence: "", notes: "" }
+
+  # Category G — Personalization (T2)
+  REQ-G1: { disposition: deferred, evidence: "", notes: "" }
+  REQ-G2: { disposition: deferred, evidence: "", notes: "" }
+  REQ-G3: { disposition: deferred, evidence: "", notes: "" }
+
+  # Category H — Proactivity & Lifecycle (H4 T0)
+  REQ-H1: { disposition: deferred, evidence: "", notes: "" }
+  REQ-H2: { disposition: deferred, evidence: "", notes: "" }
+  REQ-H3: { disposition: deferred, evidence: "", notes: "" }
+  REQ-H4: { disposition: met, evidence: "BOOTSTRAP-NEW-BUSINESS session one yields a locked selection record + the unconditional L1 model + V instruments", notes: "session one yields a locked selection + the unconditional documents" }
+
+  # Category I — Trust, Safety, Accountability & Calibration (TG — APPLICABLE, high stakes)
+  REQ-I1: { disposition: met, evidence: "verify-or-flag on every figure (std 4/5); severity tags calibrate open dependencies (blocking vs non-blocking → conditional verdict)", notes: "calibration — verify-or-flag confidence on figures" }
+  REQ-I2: { disposition: deferred, evidence: "", notes: "", waiver_reason: "substrate requirement text lives in OVE requirements.yaml, not in this volume — dispositioned at SHIP-PREP 3.10, not guessed here" }
+  REQ-I3: { disposition: met, evidence: "requires-signoff-by routes to named professional roles; hard stops surfaced in manifest + operator-input register with when-to-ask triggers (06 step 3.4)", notes: "escalation — professional sign-off routing (CPA/securities attorney)" }
+  REQ-I4: { disposition: met, evidence: "single-owned register + source log with valid-until + freeze hashes + manifest hash-continuity + TRACEABILITY matrix (BFR-26)", notes: "auditability — assumptions register + source/dependency log + audited-bytes chain" }
+  REQ-I5: { disposition: deferred, evidence: "", notes: "", waiver_reason: "substrate requirement text lives in OVE requirements.yaml, not in this volume — dispositioned at SHIP-PREP 3.10, not guessed here" }
+
+  # Category J — Outcome Orientation (T2)
+  REQ-J1: { disposition: deferred, evidence: "", notes: "" }
+  REQ-J2: { disposition: deferred, evidence: "", notes: "" }
+  REQ-J3: { disposition: deferred, evidence: "", notes: "" }
+  REQ-J4: { disposition: deferred, evidence: "", notes: "value-attribution vs a general LLM" }
+
+  # Category K — Data Governance, Privacy & Ownership (TG — APPLICABLE, high stakes)
+  REQ-K1: { disposition: met, evidence: "founder data confined to its cartridge; cross-cartridge exposure only via benchmark-library k-anonymized ranges (N≥3, identity stripped)", notes: "founder financial data handling" }
+  REQ-K2: { disposition: deferred, evidence: "", notes: "", waiver_reason: "substrate requirement text lives in OVE requirements.yaml, not in this volume — dispositioned at SHIP-PREP 3.10, not guessed here" }
+  REQ-K3: { disposition: met, evidence: "packaged folder stands alone with no reference back to the OV (06 § after packaging); operator owns cartridges and the _portfolio/ stores", notes: "operator owns the stack + portfolio" }
+
+  # Category L — Reliability & Methodological Integrity (T2)
+  REQ-L1: { disposition: deferred, evidence: "", notes: "" }
+  REQ-L2: { disposition: deferred, evidence: "", notes: "no authoritative answers outside competence" }
+  REQ-L3: { disposition: deferred, evidence: "", notes: "" }
+
+  # Category M — Compounding Moat & Retention (T2; moat items)
+  REQ-M1: { disposition: partial, evidence: "seeded catalog PF-1..PF-9 at Artifacts/_portfolio/failure-catalog.md; loaded at every session start", notes: "failure-catalog flywheel — committed moat; 'partial' until a real cartridge grows a use-derived entry (O-1)" }
+  REQ-M2: { disposition: partial, evidence: "mechanism built (_portfolio/benchmark-library.md): CONSULT (std 14) + CONTRIBUTE (06 step 6) + k-anonymity N≥3; illustrative seeds only", notes: "benchmark/comparables library — committed moat; 'partial' until real cartridges populate the store (O-2)" }
+  REQ-M3: { disposition: deferred, evidence: "", notes: "" }
+  REQ-M4: { disposition: n-a, evidence: "", notes: "cross-operator cohort effects remain n-a — founder stacks are confidential; if ever reconsidered, only k-anonymized ranges travel (benchmark-library anonymization rule 3)" }
